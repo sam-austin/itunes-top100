@@ -1,6 +1,8 @@
 @import "./foundation/settings";
 @import "~foundation-sites/scss/foundation";
 @include foundation-everything;
+@import 'antd/dist/antd.css';
+
 // place global css here
 *,
 *::before,
