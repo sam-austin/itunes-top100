@@ -1,19 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import { Layout, Menu } from 'antd';
+const { Header } = Layout;
+
 const TopBar = ({ user }) => {
 
   return (
-    <div className="top-bar">
-      <div className="top-bar-left">
-        <ul className="menu">
-          <li className="menu-text">Itunes Top 100</li>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-        </ul>
-      </div>
-    </div>
+      <Header style={{ position: 'fixed', zIndex: 1, width: '100%',  backgroundColor: 'white', borderBottom: '3px', padding: 0}}>
+        <Menu mode="horizontal" style={{ fontSize: "16px", border: 0 }} >
+          <Menu.Item key="1" style={{float: "left"}}>
+            <Link to="/">
+              iTunes Top 100 Albums
+            </Link>
+          </Menu.Item>
+        </Menu>
+      </Header>
   );
 };
 
