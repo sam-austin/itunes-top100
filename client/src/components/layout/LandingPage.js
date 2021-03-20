@@ -9,7 +9,7 @@ const LandingPage = props => {
   
   const [fetchedAlbums, setFetchedAlbums] = useState([])
 
-  const getMarkers = async () => {
+  const getAlbums = async () => {
     try {
       const response = await fetch("https://itunes.apple.com/us/rss/topalbums/limit=100/json")
       if (!response.ok) {
@@ -25,7 +25,7 @@ const LandingPage = props => {
   }
 
   useEffect(() => {
-    getMarkers()
+    getAlbums()
   }, [])
 
   const albumDisplay = fetchedAlbums.map(fetchedAlbum => {
@@ -44,11 +44,11 @@ const LandingPage = props => {
       <div className="grid-x grid-margin-x">
         <div className="cell medium-2 large-2" />
         <div className="cell small-12 medium-8 large-8">
-          <Content style={{ backgroundColor: "white" }}>
+          <Content style={{ backgroundColor: "white" }} className='album-container'>
             {albumDisplay}
           </Content>
         </div>
-        <div className="cell medium-3 large-2" />
+        <div className="cell medium-2 large-2" />
       </div>
     </Layout>
   )
