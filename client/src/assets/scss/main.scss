@@ -23,7 +23,7 @@
 }
 
 .album-tile {
-  width:200px;
+  width:275px;
   height:275px;
 }
 
@@ -80,4 +80,15 @@
 
 .searchBar {
   padding-top: 50px;
+}
+
+.card-image {
+  width: 100px;
+}
+
+.ant-card-cover {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25px;
 }
