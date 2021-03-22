@@ -16,15 +16,15 @@
 }
 
 .album-container {
-  padding-top: 100px;
+  padding-top: 50px;
   display:flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
 .album-tile {
-  width:300px;
-  height:300px;
+  width:200px;
+  height:275px;
 }
 
 .top-bar-text {
@@ -72,4 +72,12 @@
   0% {
     height: 60%
   }
+}
+
+.ant-input {
+  margin: 0;
+}
+
+.searchBar {
+  padding-top: 50px;
 }

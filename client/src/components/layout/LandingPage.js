@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react"
-import { Layout} from 'antd';
+import { Layout } from 'antd';
 const { Header, Content } = Layout;
 
 import AlbumTile from "./AlbumTile"
+import SearchBar from "./SearchBar"
 
 
 const LandingPage = props => {
   
   const [fetchedAlbums, setFetchedAlbums] = useState([])
+  const [searchedAlbum, setSearchedAlbum] = useState("")
 
   const getAlbums = async () => {
     try {
@@ -28,7 +30,15 @@ const LandingPage = props => {
     getAlbums()
   }, [])
 
-  const albumDisplay = fetchedAlbums.map(fetchedAlbum => {
+  const renderSearchedAlbums = fetchedAlbums.filter(fetchedAlbum => {
+    if (searchedAlbum == "") {
+      return fetchedAlbum
+    } else if (fetchedAlbum["im:name"].label.toLowerCase().includes(searchedAlbum.toLowerCase()) || fetchedAlbum["im:artist"].label.toLowerCase().includes(searchedAlbum.toLowerCase())) {
+      return fetchedAlbum
+    }
+  })
+  
+  const albumDisplay = renderSearchedAlbums.map(fetchedAlbum => {
     return(
       <AlbumTile
         key={fetchedAlbum.id.label}
@@ -37,18 +47,24 @@ const LandingPage = props => {
       />
     )
   })
+
+  const handleInputChange = event => setSearchedAlbum(event.target.value)
+  
   
   return(
     <Layout>
       <Header></Header>
-      <div className="grid-x grid-margin-x">
-        <div className="cell medium-2 large-2" />
-        <div className="cell small-12 medium-8 large-8">
+      <div className="grid-x grid-margin-x" style={{ backgroundColor: "white", justifyContent: "center" }}>
+        <div className="cell small-12 medium-10 large-10">
+          <div className="grid-x grid-margin-x" style={{ justifyContent: "center" }}>
+            <div className="cell small-12 medium 8 large-6 searchBar">
+              <SearchBar handleInputChange={handleInputChange} searchedAlbum={searchedAlbum} />
+            </div>
+          </div>
           <Content style={{ backgroundColor: "white" }} className='album-container'>
             {albumDisplay}
           </Content>
         </div>
-        <div className="cell medium-2 large-2" />
       </div>
     </Layout>
   )

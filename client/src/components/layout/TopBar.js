@@ -16,15 +16,16 @@ const TopBar = props => {
             position: 'relative',
             display: 'flex',
             justifyContent: 'center', 
-          }} 
+          }}
+          theme="dark"
         >
-          <Menu.Item key='1' disabled style={{ transform: 'rotate(180deg)', margin: '0'}}>
+          <Menu.Item key='1' disabled style={{ transform: 'rotate(180deg)', margin: '0', padding: '0'}}>
             <div className='vertical-bar'></div>
-            <div className='vertical-bar' style={{transform: 'translate(20px,0)'}}></div>
-            <div className='vertical-bar' style={{transform: 'translate(40px,0)'}}></div>
-            <div className='vertical-bar' style={{transform: 'translate(60px,0)'}}></div>
+            <div className='vertical-bar' style={{ transform: 'translate(20px,0)' }}></div>
+            <div className='vertical-bar' style={{ transform: 'translate(40px,0)' }}></div>
+            <div className='vertical-bar' style={{ transform: 'translate(60px,0)' }}></div>
           </Menu.Item>
-          <Menu.Item key='2' style={{ margin: '0 10px' }}>
+          <Menu.Item key='2' style={{ margin: '0 10px', padding: '0' }}>
             <Link to='/' className='top-bar-text'>
               Top 100 Albums
             </Link>
