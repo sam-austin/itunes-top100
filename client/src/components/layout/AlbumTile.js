@@ -1,14 +1,43 @@
 import React from 'react'
+import { Card, Avatar } from 'antd'
+const { Meta } = Card
 
 const AlbumTile = ({ fetchedAlbum, index }) => {
 
   return(
-    <div className='album-tile'>
-      <h6>{index}</h6>
-      <img alt='album img' src={fetchedAlbum["im:image"][0].label} />
-      <h5>{fetchedAlbum["im:name"].label}</h5>
-      <h5>{fetchedAlbum["im:artist"].label}</h5>
-    </div>
+    <Card 
+      className='album-tile'
+      hoverable
+      bordered={false}
+      cover={<img className="card-image" alt='album img' src={fetchedAlbum["im:image"][0].label} />}
+    >
+      <Meta
+        avatar={<Avatar style={{ backgroundColor: "royalblue" }}>{index}</Avatar>} 
+        title={
+          <div 
+            style={{ 
+              fontSize: "14px", 
+              overflow: "hidden",
+              whiteSpace: "normal", 
+              textOverflow: "ellipsis" 
+            }}
+          >
+            {fetchedAlbum["im:name"].label}
+          </div>
+        }
+        description={
+          <div
+            style={{  
+              overflow: "hidden",
+              whiteSpace: "nowrap",
+              textOverflow: "ellipsis" 
+            }}
+          >
+            {fetchedAlbum["im:artist"].label}
+          </div>
+        }
+      />
+    </Card>
   )
 }
 

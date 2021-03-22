@@ -5,7 +5,6 @@ const { Header, Content } = Layout;
 import AlbumTile from "./AlbumTile"
 import SearchBar from "./SearchBar"
 
-
 const LandingPage = props => {
   
   const [fetchedAlbums, setFetchedAlbums] = useState([])
@@ -50,7 +49,6 @@ const LandingPage = props => {
 
   const handleInputChange = event => setSearchedAlbum(event.target.value)
   
-  
   return(
     <Layout>
       <Header></Header>
@@ -61,7 +59,7 @@ const LandingPage = props => {
               <SearchBar handleInputChange={handleInputChange} searchedAlbum={searchedAlbum} />
             </div>
           </div>
-          <Content style={{ backgroundColor: "white" }} className='album-container'>
+          <Content style={{ backgroundColor: "white" }} className="album-container">
             {albumDisplay}
           </Content>
         </div>
