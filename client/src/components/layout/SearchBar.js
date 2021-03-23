@@ -1,6 +1,6 @@
 import React from "react"
-import { Input } from 'antd';
-import { SearchOutlined } from '@ant-design/icons'
+import { Input } from "antd";
+import { SearchOutlined } from "@ant-design/icons"
 
 const SearchBar = ({ handleInputChange, searchedAlbum }) => {
 
