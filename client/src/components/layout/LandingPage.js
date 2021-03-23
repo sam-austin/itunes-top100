@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { Layout } from 'antd';
+import { Layout } from "antd";
 const { Header, Content } = Layout;
 
 import AlbumTile from "./AlbumTile"
