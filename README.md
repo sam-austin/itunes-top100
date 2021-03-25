@@ -6,13 +6,22 @@ This web app displays top 100 albums from iTunes/Apple Music.
 
 ## Built with
 - React
-- Node.js/Express
+- Node.js
+- SCSS
 
-## Key Features
+## Other Frameworks/Features
+- Ant Dsign
+- Foundation
+- CSS animations
+- CSS media queries
 
-- ### View more information
+## Key Functionality
 
+- ### Scroll & View More Information
+  ![view](https://media.giphy.com/media/OaaAZ63WT2SvoyxCoe/giphy.gif)
+  
 - ### Search
+  ![search](https://media.giphy.com/media/hzbqsAVTdEkksUdukH/giphy.gif)
 
 ## Available Scripts
 
