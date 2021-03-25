@@ -6,7 +6,7 @@ const { Header } = Layout;
 const TopBar = props => {
 
   return (
-      <Header style={{ position: "fixed", zIndex: 1, width: "100%", padding: 0}}>
+      <Header style={{ position: "fixed", zIndex: 10, width: "100%", padding: 0}}>
         <Menu 
           mode="horizontal" 
           style={{ 
