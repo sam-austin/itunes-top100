@@ -10,7 +10,7 @@ This web app displays and dynamically updates top 100 albums from iTunes/Apple M
 - SCSS
 
 ## Other Frameworks/Features
-- Ant Dsign
+- Ant Design
 - Foundation
 - CSS animations
 - CSS media queries
