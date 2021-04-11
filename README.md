@@ -1,7 +1,7 @@
 # Top 100 Albums
 
 ## Description
-This web app displays top 100 albums from iTunes/Apple Music. 
+This web app displays and dynamically updates top 100 albums from iTunes/Apple Music. 
 [Click here visit the Heroku page!](https://itunes-top100-sp.herokuapp.com/)
 
 ## Built with
